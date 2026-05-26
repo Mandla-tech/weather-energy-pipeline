@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: mart_weather_energy
+    description: >
+      The primary analytical mart that joins Johannesburg daily weather
+      with Ethereum price data. One row per day and powers the Tableau dashboard.
+      It contains the rainy_day flag and rainfall_category columns used as the
+      primary dimensions in the correlation analysis.
+    columns:
+      - name: weather_date
+        description: Date of the observation — join key between weather and energy
+        tests:
+          - not_null
+          - unique
+      - name: rainy_day
+        description: >
+          True if precipitation >= 1mm (meteorological definition of a rainy day).
+          Primary boolean dimension for correlation analysis.
+        tests:
+          - not_null
+      - name: eth_price_usd
+        description: Ethereum USD price on this date
+        tests:
+          - not_null

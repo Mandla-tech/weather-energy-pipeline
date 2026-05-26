@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: stg_weather
+    description: >
+      Cleaned and standardised daily weather data for Johannesburg.
+      Source is the raw_weather table populated by the Airflow pipeline.
+    columns:
+      - name: date
+        description: The date of the weather observation
+        tests:
+          - not_null
+          - unique
+      - name: temp_celsius
+        description: Temperature in degrees Celsius
+        tests:
+          - not_null
+      - name: precipitation_mm
+        description: Total daily precipitation in millimetres
+        tests:
+          - not_null
+
+  - name: stg_energy
+    description: >
+      Cleaned daily Ethereum price data from CoinGecko.
+      Used as an energy commodity proxy in the correlation analysis.
+    columns:
+      - name: date
+        description: The date of the price observation
+        tests:
+          - not_null
+          - unique
+      - name: price_usd
+        description: Ethereum closing price in USD
+        tests:
+          - not_null

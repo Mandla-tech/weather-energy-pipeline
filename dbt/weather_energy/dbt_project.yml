@@ -1,0 +1,30 @@
+
+name: 'weather_energy'
+version: '1.0.0'
+
+profile: 'weather_energy'
+
+#project directories
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+# Removed during dbt clean
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  weather_energy:
+    # Raw data cleanup and standardization
+    staging:
+      +materialized: view
+    # Analytics ready reporting models
+    marts:
+      +materialized: table
+
