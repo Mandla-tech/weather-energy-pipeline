@@ -1,0 +1,35 @@
+{
+  "latitude": -26.186293,
+  "longitude": 28.026318,
+  "generationtime_ms": 0.02944469451904297,
+  "utc_offset_seconds": 7200,
+  "timezone": "Africa/Johannesburg",
+  "timezone_abbreviation": "GMT+2",
+  "elevation": 1749.0,
+  "daily_units": {
+    "time": "iso8601",
+    "precipitation_sum": "mm"
+  },
+  "daily": {
+    "time": [
+      "2026-05-29",
+      "2026-05-30",
+      "2026-05-31",
+      "2026-06-01",
+      "2026-06-02",
+      "2026-06-03",
+      "2026-06-04",
+      "2026-06-05"
+    ],
+    "precipitation_sum": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      8.1,
+      0.0
+    ]
+  }
+}

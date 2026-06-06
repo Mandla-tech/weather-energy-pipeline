@@ -14,3 +14,6 @@ dbt/logs/
 
 # Airflow
 logs/
+
+# Generated exports recreated from the database
+data/mart_weather_energy.csv
