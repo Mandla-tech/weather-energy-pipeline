@@ -49,7 +49,7 @@ dbt, and keeps a Tableau dashboard current and automatically.
 ---
 
 ## Architecture
-
+````
 ┌─────────────────────────────────────────────────────────────┐
 │                     DATA SOURCES                            │
 │                                                             │
@@ -125,7 +125,7 @@ dbt, and keeps a Tableau dashboard current and automatically.
 │                                                             
 │  🔗 Live Dashboard → https://public.tableau.com/app/profile/mandla.moyo/viz/JohannesburgWeatherVsEthereumEnergyPrices/Dashboard1?publish=yes                 │
 └─────────────────────────────────────────────────────────────┘
-
+````
 
 ---
 
@@ -205,7 +205,7 @@ on top of clean staging models.
 ---
 
 ## 📁 Project Structure
-
+````
 weather-energy-pipeline/
 │
 ├── docker-compose.yml          # Full stack infrastructure definition
@@ -245,6 +245,7 @@ weather-energy-pipeline/
 ├── weather_openweathermap.json
 ├── weather_open_meteo.json
 └── energy_coingecko.json
+````
 
 ---
 
